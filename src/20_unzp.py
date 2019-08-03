@@ -15,7 +15,7 @@ XML_MANIFEST= os.path.join(XML_DIR, "unzipped.txt")
 # -----------------------------------------------------------------------------
 # resource name
 # -----------------------------------------------------------------------------
-RESOURCE_NAME=RESOURCE_NAME
+RESOURCE_NAME           = "{{DATA_SOURCE_NAME}}"
 
 def glob_dir(path, ending):
     with os.scandir(path) as it:

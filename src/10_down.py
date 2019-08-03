@@ -26,12 +26,13 @@ DOWNLOADED_MANIFEST     = os.path.join(ZIP_DIR, "downloaded.txt")
 # -----------------------------------------------------------------------------
 # resource name
 # -----------------------------------------------------------------------------
-RESOURCE_NAME           = RESOURCE_NAME
+RESOURCE_NAME           = "{{DATA_SOURCE_NAME}}"
 
 # -----------------------------------------------------------------------------
 # resource url
+# TODO: change the RESOURCE_URL
 # -----------------------------------------------------------------------------
-RESOURCE_URL            = "http://oasis.caiso.com/oasisapi/SingleZip?queryname=AS_REQ&market_run_id=DAM&anc_type=ALL&anc_region=ALL&startdatetime=_START_T07:00-0000&enddatetime=_END_T07:00-0000&version=1"
+RESOURCE_URL            = "http://TODO"
 
 def days():
     start_date  = START_DATE

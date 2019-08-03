@@ -22,7 +22,7 @@ DB_MANIFEST     = os.path.join(DB_DIR, "inserted.txt")
 # -----------------------------------------------------------------------------
 # resource name
 # -----------------------------------------------------------------------------
-RESOURCE_NAME=RESOURCE_NAME
+RESOURCE_NAME           = "{{DATA_SOURCE_NAME}}"
 
 SQL_DDL         ="""
 CREATE TABLE IF NOT EXISTS

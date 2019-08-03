@@ -1,38 +1,27 @@
-# data-source-template
+# {{DATA_SOURCE_NAME}}
 
-This is a template repo for data sources. Please clone this repo, using a name that follows the naming convention (below) and follow the instructions.
+Fill in the requested data below. Of course delete the instruction lines as that would be silly to leave them in.
 
-## Naming Conventions
+## About
 
-Data should be named like this:
+Fill in a description of the data source.
 
-	[REPO_TYPE]-[LOWERCASE_SOURCE]-[LOWERCASE_TOPIC]-[LOWERCASE_MODIFIER]
+## Source
 
-For example, the CAISO OASIS AS_REQ DAM report is named:
+Fill in where the data was retrieved from.
 
-	data-oasis-as-req-dam
+## Process
 
+Fill in how the data was collected and processed.
 
-## Instructions
+## Comments
 
-1. Replace this readme with the README_TMPLT.md filled out and renamed as README.md.
-1. Update the LICENSE.md on line 189:
+Fill in any extra comments.
 
-   Copyright [YEAR] NAME (COMPANY) <contact.email>
-
-1. Build out your pipeline in ./src
-1. Update the project Makefile accordingly
-
-### Pipeline
-
-A series of numbered scripts (python, bash, whatever) that can/will be invoked in series following the numeric order of 1 to 99. This structure allows any external orchestrator/workflow engine/script to easily execute the pipeline. Currently, the Makefile invokes these scripts, but it could easily be something like [airflow](https://airflow.apache.org)
-
-
-### Makefile
-
-1. Update the DATA_SOURCE_NAME on line 1 to:
-
-	data-[LOWERCASE-SOURCE]-[LOWERCASE-TOPIC]-[LOWERCASE-MODIFIER]
+## Maintainer
+* OWNER		: {{OWNER}} 
+* COMPANY	: {{COMPANY}} 
+* EMAIL		: {{EMAIL}}
 
 ## Notes
 

@@ -1,12 +1,10 @@
-DATA_SOURCE=[YOUR_DATA_SOURCE_NAME]
-
 .PHONE: all
 all: help
 
 .PHONY: help
 help:
 	# -----------------------------------------------------------------------------
-	# Processor for $(DATA_SOURCE)
+	# Processor for {{DATA_SOURCE_NAME}}
 	#
 	# Targets:
 	#
@@ -16,8 +14,8 @@ help:
 	#     save    : persist data to store (git)       : 40_save.py
 	#
 	# Created by:
-	# [YOUR NAME] <YOUR EMAIL>
-	# [YOUR COMPANY]
+	# [{{OWNER}}] <{{EMAIL}}>
+	# [{{COMPANY}}]
 	# -----------------------------------------------------------------------------
 
 # -----------------------------------------------------------------------------
