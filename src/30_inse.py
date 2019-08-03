@@ -20,7 +20,7 @@ DB_DIR          = os.path.join(os.path.curdir, "db")
 DB_MANIFEST     = os.path.join(DB_DIR, "inserted.txt")
 
 # -----------------------------------------------------------------------------
-# Replace with your resource url
+# resource name
 # -----------------------------------------------------------------------------
 RESOURCE_NAME=RESOURCE_NAME
 

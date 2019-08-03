@@ -13,7 +13,7 @@ XML_DIR     = os.path.join(CWD, "xml")
 XML_MANIFEST= os.path.join(XML_DIR, "unzipped.txt")
 
 # -----------------------------------------------------------------------------
-# Replace with your resource url
+# resource name
 # -----------------------------------------------------------------------------
 RESOURCE_NAME=RESOURCE_NAME
 

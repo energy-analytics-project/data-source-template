@@ -24,12 +24,12 @@ ZIP_DIR                 = os.path.join(CWD, "zip")
 DOWNLOADED_MANIFEST     = os.path.join(ZIP_DIR, "downloaded.txt")
 
 # -----------------------------------------------------------------------------
-# Replace with your resource url
+# resource name
 # -----------------------------------------------------------------------------
-RESOURCE_NAME=RESOURCE_NAME
+RESOURCE_NAME           = RESOURCE_NAME
 
 # -----------------------------------------------------------------------------
-# Replace with your resource url
+# resource url
 # -----------------------------------------------------------------------------
 RESOURCE_URL            = "http://oasis.caiso.com/oasisapi/SingleZip?queryname=AS_REQ&market_run_id=DAM&anc_type=ALL&anc_region=ALL&startdatetime=_START_T07:00-0000&enddatetime=_END_T07:00-0000&version=1"
 
@@ -50,12 +50,6 @@ def urls(day_pairs, url_template):
         e = end.strftime("%Y%m%d")
         yield url_template.replace("_START_", s).replace("_END_", e)
 
-# -----------------------------------------------------------------------------
-# Replace this method with something that makes sense for your resource. 
-# You want to generate file names that map directly from the url to the 
-# resource, and that are not too long (due to filename length restrictons
-# it's best to keep names < 255 chars)
-# -----------------------------------------------------------------------------
 def file_name(url):
         s = url.replace("http://oasis.caiso.com/oasisapi/", "oasis:")\
                 .replace("/", "_")\
@@ -131,5 +125,5 @@ def update_manifest(urls):
             f.write("%s\n" % url)
 
 if __name__ == "__main__":
-    logging.basicConfig(format='{"ts":%(asctime)s, "msg":%(message)s}', datefmt='%m/%d/%Y %I:%M:%S %p', level=logging.DEBUG)
+    logging.basicConfig(format='{"ts":%(asctime)s, "msg":%(message)s}', datefmt='%m/%d/%Y %I:%M:%S %p', level=logging.INFO)
     update_manifest(download(urls(pairs(days()), RESOURCE_URL)))
