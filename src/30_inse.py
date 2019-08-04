@@ -13,7 +13,7 @@ import pprint
 import datetime as dt
 import sqlite3
 
-DATABASE        = "caiso-oasis-as-req-dam.db"
+DATABASE        = "{{DATA_SOURCE_NAME}}.db"
 CWD             = os.path.abspath(os.path.curdir)
 XML_DIR         = os.path.join(CWD, "xml")
 DB_DIR          = os.path.join(os.path.curdir, "db")
