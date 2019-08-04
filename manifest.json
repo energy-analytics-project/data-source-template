@@ -1,0 +1,7 @@
+{
+    name:{{DATA_SOURCE_NAME}},
+    description: "TODO",
+    owner: {{OWNER}},
+    company: {{COMPANY}},
+    email: {{EMAIL}}
+}
