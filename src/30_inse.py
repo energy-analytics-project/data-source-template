@@ -142,7 +142,16 @@ def new_xml_files():
 def parse(xml_files):
     for f in xml_files:
         t = os.path.join(XML_DIR, f)
-        yield (f, parse_file(t))
+        try:
+            yield (f, parse_file(t))
+        except Exception as e:
+            logging.error({
+                "src":RESOURCE_NAME, 
+                "action":"parse_file",
+                "error":e,
+                "file":f,
+                "msg":"failed to parse file"
+                })
 
 def parse_file(xml_file):
     dom     = md.parse(xml_file)
@@ -195,8 +204,14 @@ def posix(timestamp):
             })
         return -1
 
+class XmlKeyException(Exception):
+    pass
+
 def value(name, dom):
-    return value_of(get_element(name, dom))
+    try:
+        return value_of(get_element(name, dom))
+    except Exception as e:
+        raise XmlKeyException("{'key':%s, 'error':%s}"%(name, e))
 
 def get_element(name, dom):
     return get_elements(name, dom)[0]
