@@ -8,14 +8,12 @@ help:
 	#
 	# Targets:
 	#
-	#     proc    : invoke targets [new,down,injest,save,publish]
-	#     down    : download all (absent) resources   : 20_down.py 
-	#     injest  : injest resources into sqlite db   : 30_inje.py
-	#     save    : persist data to store (git)       : 40_save.py
+	#     proc    : invoke all targets [down,unzip,injest,save]
+	#     down    : download zip files 
+	#     unzip   : unzip zip files
+	#     injest  : injest xml files into sqlite db
+	#     save    : commit data to store to repo
 	#
-	# Created by:
-	# [{{OWNER}}] <{{EMAIL}}>
-	# [{{COMPANY}}]
 	# -----------------------------------------------------------------------------
 
 # -----------------------------------------------------------------------------
