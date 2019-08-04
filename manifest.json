@@ -1,7 +1,8 @@
 {
-    name:{{DATA_SOURCE_NAME}},
-    description: "TODO",
-    owner: {{OWNER}},
-    company: {{COMPANY}},
-    email: {{EMAIL}}
+    "name":           "{{DATA_SOURCE_NAME}}",
+    "description":    "TODO: add a description of this data source here",
+    "maintainer":     "{{OWNER}}",
+    "company":        "{{COMPANY}}",
+    "email":          "{{EMAIL}}",
+    "repo":           "TODO: add repo URL here"
 }
