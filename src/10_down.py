@@ -30,9 +30,8 @@ RESOURCE_NAME           = "{{DATA_SOURCE_NAME}}"
 
 # -----------------------------------------------------------------------------
 # resource url
-# TODO: change the RESOURCE_URL
 # -----------------------------------------------------------------------------
-RESOURCE_URL            = "http://TODO"
+RESOURCE_URL            = "{{DATA_SOURCE_URL}}"
 
 def days():
     start_date  = START_DATE
