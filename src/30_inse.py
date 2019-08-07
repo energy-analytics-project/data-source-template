@@ -23,6 +23,7 @@ DB_MANIFEST     = os.path.join(DB_DIR, "inserted.txt")
 # resource name
 # -----------------------------------------------------------------------------
 RESOURCE_NAME           = "{{DATA_SOURCE_NAME}}"
+NS                      = "http://www.caiso.com/soa/OASISReport_v1.xsd"
 
 SQL_DDL         ="""
 CREATE TABLE IF NOT EXISTS
@@ -214,10 +215,17 @@ def value(name, dom):
         raise XmlKeyException("{'key':%s, 'error':%s}"%(name, e))
 
 def get_element(name, dom):
-    return get_elements(name, dom)[0]
+    try:
+        return get_elements(name, dom)[0]
+    except Exception as e:
+        raise XmlKeyException("{'key':%s, 'error':%s}"%(name, e))
 
 def get_elements(name, dom):
-    return dom.getElementsByTagName(name)
+    try:
+        e = dom.getElementsByTagNameNS(NS, name)
+    except:
+        e = dom.getElementsByTagName(name)
+    return e
 
 def value_of(node):
     return node.firstChild.nodeValue
